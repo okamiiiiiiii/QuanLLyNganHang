@@ -10,68 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06ca35a0-c078-49b3-aee2-7ba92b930399" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SSP.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AccountCreateRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UserRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Accounts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_12_073053_create_account_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/Account.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/ssp.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/server_processing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ssp.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/details_close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/details_open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/examples.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/syntax/Syntax Highlighter license" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/syntax/shCore.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/syntax/shCore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/contact.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front-end/addAccount.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front-end/editAccount.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front-end/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front-end/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front-end/server_processing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front-end/showDB.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front-end/showInfo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front-end/ssp.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/helloworld.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/alert.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/showAccounts.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/view.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="06ca35a0-c078-49b3-aee2-7ba92b930399" name="Default Changelist" comment="zz" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -261,8 +200,16 @@
       <workItem from="1597194270317" duration="27938000" />
       <workItem from="1597280681767" duration="30356000" />
       <workItem from="1597367488370" duration="28789000" />
-      <workItem from="1597626693293" duration="27168000" />
+      <workItem from="1597626693293" duration="27471000" />
     </task>
+    <task id="LOCAL-00001" summary="zz">
+      <created>1597657823423</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597657823423</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,6 +229,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="zz" />
+    <option name="LAST_COMMIT_MESSAGE" value="zz" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597289574294">
