@@ -1,7 +1,5 @@
 @extends('layouts/app')
 
-
-
 @section('content')
 
     <script type="text/javascript" language="javascript" class="init">
@@ -15,11 +13,11 @@
                 processing: true,
                 serverSide: true,
                 ajax: function (data, callback, settings) {
-                    console.log(data);
+
 
 
                     $.ajax({
-                        url: "{{route('get-accounts',$idUser)}}",
+                        url: "{{route('get-users')}}",
                         type: 'get',
                         contentType: 'application/x-www-form-urlencoded',
                         data: {
@@ -28,6 +26,7 @@
                         },
                         success: function (data, textStatus, jQxhr) {
                             var Arr = JSON.parse(data);
+                            console.log(Arr);
                             callback({
                                 data: Arr['data'],
                                 recordsTotal: Arr['recordsTotal'],
@@ -41,57 +40,49 @@
 
                 columns: [
                     {data: 'id'},
-                    {data: 'Code'},
-                    {data: 'Balance', render: $.fn.dataTable.render.number( ',', '.', 0, '$' )},
                     {data: 'name'},
-                        @if(\Illuminate\Support\Facades\Auth::id()==$idUser)
+                    {data: 'email'},
+                    {data: 'created_at'},
+                    {data: 'updated_at'},
+                    {data: 'account_count'},
+                        {{--{data: 'name'},--}}
+                        {{--    @if(\Illuminate\Support\Facades\Auth::id()==$idUser)--}}
                     {
-                        //adds td row for button
                         data: null,
                         render: function ( data, type, row ) {
-                            var editStr1 = '<a class="btn btn-info" href="{{url('users/'.$idUser.'/editAccount')}}' + '/';
-                            var editStr3 = '">Edit</a>'
-                            var editStr = editStr1 + row['id'].toString() + editStr3;
-                            var delStr1 = '<a class="btn btn-danger" onclick="return confirm(' + '\'Are you sure?\'' + ')" href="{{url('users/'.$idUser.'/delAccount')}}' + '/';
-                            var delStr3 = '">Delete</a>'
-                            var delStr = delStr1 + row['id'].toString() + delStr3;
-                            return editStr + delStr;
+                            var str1 = '<a class="btn btn-success" href="{{url('users')}}' + '/';
+                            var str2 = '">Show Account</a>'
+                            return str1 + row['id'].toString() + str2;
                         }
                     }
-                    @endif
+                    {{--@endif--}}
                 ]
             })
         })
-
-
     </script>
 
-
-
     <div class="container">
-        <table class="table" id="example">
-            <thead class="thead-light">
-            <tr>
-                <th>Id</th>
-                <th>Code</th>
-                <th>Balance</th>
-                <th>User</th>
-                @if(\Illuminate\Support\Facades\Auth::id()==$idUser)
-                <th>Action</th>
-                @endif
-            </tr>
-            </thead>
-        </table>
-        @if(\Illuminate\Support\Facades\Auth::id()==$idUser)
-        <a class="btn btn-small btn-success" href="{{url('users/'.$idUser.'/createAccount') }}" id="CreateButton">Create new Account</a>
-        @endif
-    </div>>
+
+    <table class="table" id="example">
+
+        <thead class="thead-light">
+        <tr>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+            <th>Number of accounts</th>
+            <th>Action</th>
+        </tr>
+
+        </thead>
+
+    </table>
+    </div>
+
+
 
 
 @endsection
-
-
-
-
-
-

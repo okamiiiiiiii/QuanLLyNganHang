@@ -12,4 +12,8 @@ class Accounts extends Model
     protected $fillable = [
         'Code', 'Balance', 'idUser',
     ];
+
+    public function User(){
+        return $this->belongsTo('User','idUser','id');
+    }
 }

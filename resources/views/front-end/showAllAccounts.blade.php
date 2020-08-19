@@ -19,7 +19,7 @@
 
 
                     $.ajax({
-                        url: "{{route('get-accounts',$idUser)}}",
+                        url: "{{route('get-all-accounts')}}",
                         type: 'get',
                         contentType: 'application/x-www-form-urlencoded',
                         data: {
@@ -44,21 +44,6 @@
                     {data: 'Code'},
                     {data: 'Balance', render: $.fn.dataTable.render.number( ',', '.', 0, '$' )},
                     {data: 'name'},
-                        @if(\Illuminate\Support\Facades\Auth::id()==$idUser)
-                    {
-                        //adds td row for button
-                        data: null,
-                        render: function ( data, type, row ) {
-                            var editStr1 = '<a class="btn btn-info" href="{{url('users/'.$idUser.'/editAccount')}}' + '/';
-                            var editStr3 = '">Edit</a>'
-                            var editStr = editStr1 + row['id'].toString() + editStr3;
-                            var delStr1 = '<a class="btn btn-danger" onclick="return confirm(' + '\'Are you sure?\'' + ')" href="{{url('users/'.$idUser.'/delAccount')}}' + '/';
-                            var delStr3 = '">Delete</a>'
-                            var delStr = delStr1 + row['id'].toString() + delStr3;
-                            return editStr + delStr;
-                        }
-                    }
-                    @endif
                 ]
             })
         })
@@ -76,22 +61,10 @@
                 <th>Code</th>
                 <th>Balance</th>
                 <th>User</th>
-                @if(\Illuminate\Support\Facades\Auth::id()==$idUser)
-                <th>Action</th>
-                @endif
             </tr>
             </thead>
         </table>
-        @if(\Illuminate\Support\Facades\Auth::id()==$idUser)
-        <a class="btn btn-small btn-success" href="{{url('users/'.$idUser.'/createAccount') }}" id="CreateButton">Create new Account</a>
-        @endif
     </div>>
 
 
 @endsection
-
-
-
-
-
-

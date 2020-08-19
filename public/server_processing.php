@@ -67,7 +67,7 @@ $where ="idUser = '1'";
 
 require( 'ssp.class.php' );
 
-echo json_encode(SSP::complex($_GET, $sql_details, $table, $primaryKey, $columns, $where));
+echo json_encode(SSP::simple($_GET, $sql_details, $table, $primaryKey, $columns));
 
 
 

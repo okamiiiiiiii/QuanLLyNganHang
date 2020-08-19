@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="container">
-    <form method="post" action="{{\Illuminate\Support\Facades\URL::current().'/add'}}">
+    <form method="post" action="{{\Illuminate\Support\Facades\URL::current().'/store'}}">
         @csrf
         <div class="form-group">
             <label >Code:</label>

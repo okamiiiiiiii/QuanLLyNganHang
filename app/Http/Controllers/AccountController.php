@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-require 'SSP.php';
+
 use Illuminate\Http\Request;
 use App\Models\Accounts;
 use App\Models\User;
@@ -12,40 +12,32 @@ use App\Http\Controllers\SSP;
 
 class AccountController extends Controller
 {
-    public function getByID(Request $request, $id)
-    {
+    public function index(){
+        return view('front-end/showAllAccounts');
+    }
 
-        $idUser = explode("/", $request->url())[6];
+    public function create(){
+        return view('front-end/createAccount');
+    }
+    public function show($id)
+    {
+        $idUser = $id;
         $accounts = User::find($idUser)->Account;
 
         return view('front-end/showInfo', compact('accounts', 'idUser'));
     }
 
-
-
-    public function getByIDClone(Request $request)
+    public function store(AccountCreateRequest $request, $id)
     {
-        $idUser = explode("/", $request->url())[6];
-        $accounts = Accounts::where('idUser', $idUser)->paginate(10);
-        //$accounts = Accounts::paginate(10);
-
-        return view('showAccounts', compact('accounts', 'idUser'));
-    }
-
-    public function create(AccountCreateRequest $request, $id)
-    {
-        $idUser = explode("/", $request->url())[6];
         print_r($request->input());
         $code = $request->input('code');
         $balance = $request->input('balance');
-        Accounts::create(['Code' => $code, 'Balance' => $balance, 'idUser' => $idUser]);
-        return redirect('users/' . $idUser);
+        Accounts::create(['Code' => $code, 'Balance' => $balance, 'idUser' => $id]);
+        return redirect('users/' . $id);
     }
 
-    public function edit(AccountCreateRequest $request)
+    public function update(AccountCreateRequest $request, $id)
     {
-        $id = explode('/', $request->url())[8];
-        //print_r($request->input());
         $newCode = $request->input('code');
         $newBalance = $request->input('balance');
 
@@ -56,11 +48,61 @@ class AccountController extends Controller
         return redirect('users/' . $account->idUser);
     }
 
-    public function delete(Request $request)
+    public function edit($id){
+        $account = Accounts::find($id);
+        return view('front-end/editAccount',compact('account'));
+    }
+
+    public function delete(Request $request, $id)
     {
-        $id = explode('/', $request->url())[8];
         $account = Accounts::find($id);
         $account->delete();
         return redirect('users/' . explode('/', $request->url())[6]);
+    }
+
+    public function getJSON(Request $request, $id)
+    {
+        $Start = $request->input('RecordsStart');
+        $Limit = $request->input('PageSize');
+
+        $accounts = Accounts::select('account.id', 'Code', 'Balance', 'name')
+            ->with('User')
+            ->where('idUser', $id)
+            ->offset($Start)
+            ->limit($Limit)
+            ->get()->toArray();
+        //$countFilter = count($accounts);
+        $countTotal = Accounts::where('idUser', $id)->count();
+
+
+        $output = [
+            "recordsTotal" => $countTotal,
+            "recordsFiltered" => $countTotal,
+            "data" => $accounts,
+        ];
+        $json = json_encode($output);
+        echo $json;
+    }
+
+    public function getAllJSON(Request $request)
+    {
+        $Start = $request->input('RecordsStart');
+        $Limit = $request->input('PageSize');
+
+        $accounts = Accounts::select('account.id', 'Code', 'Balance', 'name')
+            ->with('User')
+            ->offset($Start)
+            ->limit($Limit)
+            ->get();
+        $countTotal = Accounts::count();
+
+
+        $output = array(
+            "recordsTotal" => $countTotal,
+            "recordsFiltered" => $countTotal,
+            "data" => $accounts,
+        );
+        $json = json_encode($output);
+        echo $json;
     }
 }

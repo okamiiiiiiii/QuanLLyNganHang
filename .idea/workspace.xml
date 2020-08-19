@@ -10,7 +10,41 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06ca35a0-c078-49b3-aee2-7ba92b930399" name="Default Changelist" comment="zz" />
+    <list default="true" id="06ca35a0-c078-49b3-aee2-7ba92b930399" name="Default Changelist" comment="zz">
+      <change afterPath="$PROJECT_DIR$/config/debugbar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front-end/showAllAccounts.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front-end/showUsers.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/QuanLLyNganHang.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QuanLLyNganHang.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SSP.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Accounts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Accounts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/server_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/server_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/contact.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front-end/addAccount.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front-end/createAccount.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front-end/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front-end/register.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front-end/server_processing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front-end/showDB.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front-end/showInfo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front-end/showInfo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front-end/ssp.class.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/helloworld.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/alert.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/showAccounts.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/view.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,6 +174,9 @@
       <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
       <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ft9CBz0yUdQHrQRBjtAmyjxiZO" />
@@ -200,7 +237,9 @@
       <workItem from="1597194270317" duration="27938000" />
       <workItem from="1597280681767" duration="30356000" />
       <workItem from="1597367488370" duration="28789000" />
-      <workItem from="1597626693293" duration="27471000" />
+      <workItem from="1597626693293" duration="28376000" />
+      <workItem from="1597712746844" duration="28371000" />
+      <workItem from="1597798381355" duration="18522000" />
     </task>
     <task id="LOCAL-00001" summary="zz">
       <created>1597657823423</created>
@@ -245,10 +284,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="202" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1597119034135" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597051968030">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597737837279">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597051968030" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597737837279" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597224457055">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -273,10 +312,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="745" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597650910691" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1597635170788">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1597811814336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597635170788" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597811814336" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597400112657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -289,5 +328,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597640381108" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/front-end/showInfo.blade.php</url>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
